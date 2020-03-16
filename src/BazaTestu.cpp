@@ -18,7 +18,7 @@ static WyrazenieZesp  TestLatwy[] =
 
 /*
  * Analogicznie zdefiniuj test "trudne"
- *
+ *:)
  */
 
 
