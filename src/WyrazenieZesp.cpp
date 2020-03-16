@@ -10,13 +10,7 @@ using namespace std;
 
 void Wyswietl(LZespolona){
 
-cout<<'('<<Arg1.re<<;
-
-if (Arg1.im)>0{
-    cout<<'+';
-}
-cout<<Arg1.im<<'i)'<<endl;
-
+cout<<'('<<Arg.re<<showpos<<Arg.im<<"i)/n";
 };
 
 LZespolona Oblicz(WyrazenieZesp  WyrZ){
@@ -26,25 +20,26 @@ LZespolona Oblicz(WyrazenieZesp  WyrZ){
 //LZesp tmp
 LZespolona tmp;
 
-switch (4)
+switch (WyrZ.Op)
 {//skad te wyr1 wyr2???????????????????????????????????????/
 case '+':
-    tmp Dodaj (Skl1, Skl2)
+    tmp Dodaj (Skl1, Skl2);
     break;
 
 case '-':
-    tmp Odejmij (Skl1, Skl2)
+    tmp Odejmij (Skl1, Skl2);
     break;
 
 case '*':
-    tmp Mnoz (Skl1, Skl2)
+    tmp Mnoz (Skl1, Skl2);
     break;
 
 case '/':
-    tmp Dziel (Skl1, Skl2)
+    tmp Dziel (Skl1, Skl2);
     break;
 
-default: return tmp;
+default: 
+///ie wiem 
     break;
 }
 // switch(wyr.zank);

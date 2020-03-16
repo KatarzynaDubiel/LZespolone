@@ -1,5 +1,6 @@
 #include "LZespolona.hh"
 
+#include <cmath.h>
 
 
 /*!
@@ -31,12 +32,15 @@ LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2)
 {
   LZespolona  Wynik;
 
-  Wynik.re = Skl1.re * Skl2.re;
-  Wynik.im = Skl1.im * Skl2.im;
+  Wynik.re =(Skl1.re*Skl2.re)+(Skl1.re*Skl2.im)+(Skl1.im*Skl2.re)+(Skl1.im*Skl2.im);
+  //czy + a - trzeba jakoś inaczej rozpatrywac?
+  
   return Wynik;
 }
 
-///i na double same
+///i na double 
+
+
 
 LZespolona Sprzezenie(Arg2){
   //na minus, ale co
@@ -49,13 +53,9 @@ LZespolona Sprzezenie(Arg2){
 double Modul2(Arg2){
   //na kwadrat, ale co
   LZespolona ModulArg2;
-  if (Arg2<0)
-  {
-    ModulArg2=-Arg2;
-  }
-  else{
-    ModulArg2=Arg2;
-  }
+
+    ModulArg2=sqrt((Arg2.re)*(Arg2.re))+((Arg2.im)*(Arg2.im));
+
   return ModulArg2;
 };
 
