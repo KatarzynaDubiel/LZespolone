@@ -8,6 +8,19 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
+  //////////////////////wczytaj//////////////?????????????????????????????????????tu czy do bazytestu czy gdzie i po co
+
+  void WczytajWyrZesp(Arg1, Op, Arg2){
+    cin>>Arg1>>Op>>Arg2;
+    cout<<endl;
+  }
+  //wcyztajwyrzespolone(pierwsza)
+  //std::cin>>Arg1
+  //znak
+  //druga
+  //ogolem przecizenie zamist tego,a ale powoli
+
+  //////////////////////wczytaj//////////////
 
   if (argc < 2) {
     cout << endl;
@@ -42,5 +55,7 @@ int main(int argc, char **argv)
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;
+
+  cout << "staty"<<endl;
 
 }

@@ -7,10 +7,10 @@ __start__: ${TRGDIR}/test_arytm_zesp
 	${TRGDIR}/test_arytm_zesp  latwy
 
 ${TRGDIR}/test_arytm_zesp: ${OBJ} ${OBJ}/main.o ${OBJ}/LZespolona.o\
-                     ${OBJ}/WyrazenieZesp.o ${OBJ}/BazaTestu.o ${OBJ}/BazaTestu.o
+                     ${OBJ}/WyrazenieZesp.o ${OBJ}/BazaTestu.o ${OBJ}/BazaTestu.o/${OBJ}/Stats.o
 	g++ -o ${TRGDIR}/test_arytm_zesp ${OBJ}/main.o ${OBJ}/LZespolona.o\
-                     ${OBJ}/WyrazenieZesp.o ${OBJ}/BazaTestu.o
-
+                     ${OBJ}/WyrazenieZesp.o ${OBJ}/BazaTestu.o/${OBJ}/Stats.o
+#po co dwa razy BazaTestu?
 ${OBJ}:
 	mkdir ${OBJ}
 
@@ -32,7 +32,8 @@ ${OBJ}/BazaTestu.o: src/BazaTestu.cpp inc/BazaTestu.hh inc/WyrazenieZesp.hh\
                        inc/LZespolona.hh
 	g++ -c ${FLAGS} -o ${OBJ}/BazaTestu.o src/BazaTestu.cpp
 
-
+${OBJ}/Stats.o: src/stats.cpp inc/stats.hh
+	g++ -c ${FLAGS} -o ${OBJ}/stats.o src/stats.cpp
 
 
 
