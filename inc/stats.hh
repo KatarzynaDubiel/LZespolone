@@ -1,11 +1,13 @@
 //struktura statystyk
+#ifndef STATYSTYKA_HH
+#define STATYSTYKA_HH
 
-struct statystyka
+struct Statystyka
 {
     int PoprOdp;
-    int ZleOdp;
     int LWszystkichOdp;
-    int LPoprSformulPyt;
     //np ai to niepopr
     //inkrementacje
 };
+
+#endif

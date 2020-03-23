@@ -27,5 +27,12 @@ LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 
+LZespolona operator / (LZespolona Skl1, LZespolona  Skl2);
+
+void Wyswietl(LZespolona Skl1);
+bool Wczytaj(LZespolona &Skl1);
+
+std::ostream & operator << (std::ostream& Strm, LZespolona Skl1);
+std::ostream & operator >>(std::istream& Strm, LZespolona &Skl1);
 
 #endif
