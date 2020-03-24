@@ -49,6 +49,35 @@ LZespolona  operator / (LZespolona  Skl1,  double  Skl2)
   return Wynik;
 }
 
+LZespolona  operator % (LZespolona  Skl1,  LZespolona  Skl2)
+{
+  LZespolona  Wynik;
+//tutaj cos chyba inaczej IFYYYYYY
+                      if(Skl1.re<Skl2.re || Skl1.im<Skl2.im)//nie miesci sie - zwracam pierwsze
+                      {
+                        Wynik.re=Skl1.re;
+                        Wynik.im=Skl1.im;
+                      }
+                      else if(Skl1.re>Skl2.re && Skl1.im>Skl2.im){//> i > zwraca modulo
+                        Wynik.re=Skl1.re%Skl2.re;
+                        Wynik.im=Skl1.im%Skl2.im;                        
+                      }
+                      else if(Skl1.re>Skl2.re && Skl1.im<Skl2.im){
+                        Wynik.re=Skl1.re%Skl2.re;
+                        Wynik.im=Skl1.im; 
+                      }
+                      else if(Skl1.re<Skl2.re && Skl1.im>Skl2.im){
+                        Wynik.re=Skl1.re;
+                        Wynik.im=Skl1.im%Skl2.im; 
+                      }
+                      else if(Skl1.re==Skl2.re && Skl1.im==Skl2.im){//rowne
+                        Wynik.re=0;
+                        Wynik.im=0; 
+                      }//ROBIE ZA DUZO PRZYPADKOW - ZNAJDZ SPRYTNIEJSZY SPOSOB
+                      
+  return Wynik;
+}
+
 
 
 double modul2(LZespolona Skl1){

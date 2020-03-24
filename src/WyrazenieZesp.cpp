@@ -27,6 +27,10 @@ void Wyswietl(WyrazenieZesp WyrZ){
         case Op_Dziel:
         std::cout<<"/";
         break;
+
+        case Op_Modulo:
+        std::cout<<"%";
+        break;
     }  
     Wyswietl(WyrZ.Arg2);
     std::cout<<"=";  
@@ -49,6 +53,10 @@ std::ostream & operator << (std::ostream& Strm, WyrazenieZesp WyrZ){
 
         case Op_Dziel:
         Strm<<"/";
+        break;
+
+        case Op_Modulo:
+        Strm<<"%";
         break;
     }
     Strm<<WyrZ.Arg2;
@@ -107,6 +115,10 @@ LZespolona Oblicz(WyrazenieZesp  WyrZ){
 
         case Op_Dziel:
         wynik=WyrZ.Arg1/WyrZ.Arg2;
+        break;
+
+        case Op_Modulo:
+        wynik=WyrZ.Arg1%WyrZ.Arg2;
         break;
     }
 

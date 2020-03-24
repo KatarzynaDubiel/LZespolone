@@ -29,6 +29,7 @@ LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
+LZespolona  operator % (LZespolona  Skl1,  LZespolona  Skl2);
 
 LZespolona operator / (LZespolona Skl1, LZespolona  Skl2);
 
