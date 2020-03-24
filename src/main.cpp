@@ -14,7 +14,7 @@ int main(int argc, char **argv)
 
   WyrazenieZesp Pom;
   Wczytaj(Pom);
-  Wyswietl(Pom);
+  Wyswietl(Pom);//TO ROBI PRZESTOJ APKI PRZED STARTEM - WCZYT I WYSWIETL WYRAZENIE- sprawdza czy dobrze wczytane
 
             //void WczytajWyrZesp(Arg1, Op, Arg2){//USUNELAM
               //cin>>Arg1>>Op>>Arg2;
@@ -53,8 +53,9 @@ int main(int argc, char **argv)
   WyrazenieZesp   WyrZ_PytanieTestowe;
   
   while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
-    cout << " Czesc rzeczywista pierwszego argumentu: ";
-    cout << WyrZ_PytanieTestowe.Arg1.re << endl;
+    cout << " Wyrazenia: ";
+    //cout << " Czesc rzeczywista pierwszego argumentu: ";
+    cout << "(" << WyrZ_PytanieTestowe.Arg1.re << "znak!" << WyrZ_PytanieTestowe.Arg1.im << ")znak!(" << WyrZ_PytanieTestowe.Arg2.re << "znak!" << WyrZ_PytanieTestowe.Arg2.im << ")" << endl;
   }
 
   
