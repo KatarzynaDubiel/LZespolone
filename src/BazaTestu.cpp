@@ -16,12 +16,7 @@ static WyrazenieZesp  TestLatwy[] =
     {{4,8}, Op_Dziel, {1,0}},
   };
 
-  static WyrazenieZesp  TestTrudny[] =
-  { {{15,1}, Op_Dodaj, {100,2}},
-    {{1,0}, Op_Odejmij, {0,1}},
-    {{3,0}, Op_Mnoz, {0,3}},
-    {{4,8}, Op_Dziel, {1,0}},
-  };
+  
 
 /*
  * Analogicznie zdefiniuj test "trudne"

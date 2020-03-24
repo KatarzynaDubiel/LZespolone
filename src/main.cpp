@@ -1,6 +1,8 @@
 #include <iostream>
 #include "BazaTestu.hh"
 
+#include "WyrazenieZesp.hh"//DOPISALAM 
+
 using namespace std;
 
 
@@ -14,10 +16,10 @@ int main(int argc, char **argv)
   Wczytaj(Pom);
   Wyswietl(Pom);
 
-  void WczytajWyrZesp(Arg1, Op, Arg2){
-    cin>>Arg1>>Op>>Arg2;
-    cout<<endl;
-  }
+            //void WczytajWyrZesp(Arg1, Op, Arg2){//USUNELAM
+              //cin>>Arg1>>Op>>Arg2;
+              //cout<<endl;
+            //}//USUNELAM
   //wcyztajwyrzespolone(pierwsza)
   //std::cin>>Arg1
   //znak
@@ -59,7 +61,5 @@ int main(int argc, char **argv)
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;
-
-  cout << "staty"<<endl;
 
 }

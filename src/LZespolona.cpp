@@ -1,6 +1,7 @@
 #include "LZespolona.hh"
 
-
+#include <iostream>
+#include <ostream> //DOPISALAM (???)
 /*!
  * Realizuje dodanie dwoch liczb zespolonych.
  * Argumenty:
@@ -48,29 +49,31 @@ LZespolona  operator / (LZespolona  Skl1,  double  Skl2)
   return Wynik;
 }
 
-LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2)
-{
-  return Skl1*Sprzezenie(Skl2)/modul2(Skl2);
-}
+
 
 double modul2(LZespolona Skl1){
   
-  return Skl1.re*Skl1.re+Skl1.im*Skl.re;
-};
+  return Skl1.re*Skl1.re+Skl1.im*Skl1.re;//BYLA LITEROWKA
+}
 
 LZespolona Sprzezenie(LZespolona Skl1){
   
-  Skl1.im=-Skl.im;
+  Skl1.im=-Skl1.im;//literowka mala
   return Skl1;
-};
+}
+
+                    LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2)
+                    {
+                      return Skl1*Sprzezenie(Skl2)/modul2(Skl2);
+                    }//ZMIANA KOLEJNOSCI
 
 void Wyswietl(LZespolona Skl1){
   std::cout<<"("<<Skl1.re<<std::showpos<<Skl1.im<<std::noshowpos<<"i)";
 }
 
-std::iostream & operator << (std::ostream& Strm, Lzespolona Skl1){
+std::ostream & operator << (std::ostream& Strm, LZespolona Skl1){//OST ZMIANA USUN I
     
-    Strm<<"("<<Skl1.re<<std::showpos<<Skl1.im<<std::noshowpos<<"i)";
+    Strm << "("<<Skl1.re<<std::showpos<<Skl1.im<<std::noshowpos<<"i)";
     return Strm;
 }
 
@@ -91,13 +94,13 @@ std::istream& operator >> (std::istream& Strm, LZespolona &Skl1){
   return Strm;
 
   Strm>>znak;
-  if(znak!="i"){
+  if(znak!='i'){
       Strm.setstate(std::ios_base::badbit);
       return Strm;
   }
 
   Strm>>znak;
-  if(znak!=")"){
+  if(znak!=')'){
       Strm.setstate(std::ios_base::badbit);
       return Strm;
   }

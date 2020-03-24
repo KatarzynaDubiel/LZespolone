@@ -8,72 +8,73 @@
 
 
 void Wyswietl(WyrazenieZesp WyrZ){
-    Wyswietl(Wyr.Arg1);
+    Wyswietl(WyrZ.Arg1);
 
     switch(WyrZ.Op){
 
-        case Op_Dodaj;
+        case Op_Dodaj:
         std::cout<<"+";
         break;
 
-        case Op_Odejmij;
+        case Op_Odejmij:
         std::cout<<"-";
         break;
 
-        case Op_Mnoz;
+        case Op_Mnoz:
         std::cout<<"*";
         break;
 
-        case Op_Dziel;
+        case Op_Dziel:
         std::cout<<"/";
         break;
     }  
     Wyswietl(WyrZ.Arg2);
     std::cout<<"=";  
-};
+}
 
 std::ostream & operator << (std::ostream& Strm, WyrazenieZesp WyrZ){
-    Strm<<WyrZ Arg1;
+    Strm<<WyrZ.Arg1;//KROPKA MIAST SPACJI XD
     switch(WyrZ.Op){
         case Op_Dodaj:
-        Strm<<"+"
+        Strm<<"+";
         break;
 
         case Op_Odejmij:
-        Strm<<"-"
+        Strm<<"-";
         break;
 
         case Op_Mnoz:
-        Strm<<"*"
+        Strm<<"*";
         break;
 
         case Op_Dziel:
-        Strm<<"/"
+        Strm<<"/";
         break;
     }
     Strm<<WyrZ.Arg2;
     Strm<<"=";
+                    //jakis return?????????????????????????
 }
 
 bool Wczytaj(WyrazenieZesp &WyrZ){
     char znak;
-    if(Wczytaj(WyrZ Arg1))
+    if(Wczytaj(WyrZ.Arg1))//KROPKA MIAST SPACJI VOL.2
     return true;
-    std::sin>>znak;
+    std::cin>>znak;
     switch(znak){
-        case "+":
+        case '+':
         WyrZ.Op=Op_Dodaj;
         break;
 
-        case "-":
+        case '-':
         WyrZ.Op=Op_Odejmij;
         break;
 
-        case "*":
+        case '*':
         WyrZ.Op=Op_Mnoz;
         break;
 
-        case "/":
+        case '/':
         WyrZ.Op=Op_Dziel;
         break;
     }
@@ -117,4 +118,4 @@ return wynik;
 //...
 //return tmp;
 
-};
+}
