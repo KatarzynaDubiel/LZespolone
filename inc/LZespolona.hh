@@ -31,7 +31,7 @@ LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator % (LZespolona  Skl1,  LZespolona  Skl2);
 
-LZespolona operator / (LZespolona Skl1, LZespolona  Skl2);
+LZespolona operator / (LZespolona Skl1, LZespolona  Skl2);// po co to jesr 2. raz?
 
 void Wyswietl(LZespolona Skl1);
 bool Wczytaj(LZespolona &Skl1);

@@ -4,8 +4,8 @@
 
 struct Statystyka
 {
-    int PoprOdp;
-    int LWszystkichOdp;
+    int PoprOdp=0;
+    int LWszystkichOdp=0;
     //np ai to niepopr
     //inkrementacje
 };

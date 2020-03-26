@@ -14,7 +14,7 @@ ${TRGDIR}/test_arytm_zesp: ${OBJ} ${OBJ}/main.o ${OBJ}/LZespolona.o\
 ${OBJ}:
 	mkdir ${OBJ}
 
-${OBJ}/main.o: src/main.cpp inc/LZespolona.hh inc/BazaTestu.hh
+${OBJ}/main.o: src/main.cpp inc/LZespolona.hh inc/BazaTestu.hh inc/stats.hh
 	g++ -c ${FLAGS} -o ${OBJ}/main.o src/main.cpp
 
 ${OBJ}/LZespolona.o: src/LZespolona.cpp inc/LZespolona.hh
@@ -32,8 +32,6 @@ ${OBJ}/BazaTestu.o: src/BazaTestu.cpp inc/BazaTestu.hh inc/WyrazenieZesp.hh\
                        inc/LZespolona.hh
 	g++ -c ${FLAGS} -o ${OBJ}/BazaTestu.o src/BazaTestu.cpp
 
-${OBJ}/Stats.o: src/stats.cpp inc/stats.hh
-	g++ -c ${FLAGS} -o ${OBJ}/stats.o src/stats.cpp
 
 
 
