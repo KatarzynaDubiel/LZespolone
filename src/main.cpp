@@ -85,7 +85,7 @@ int main(int argc, char **argv)
           
              
 
-    cout << "(" << WyrZ_PytanieTestowe.Arg1.re << "+" << WyrZ_PytanieTestowe.Arg1.im << ")"<<znaczek<<"(" << WyrZ_PytanieTestowe.Arg2.re << "+" << WyrZ_PytanieTestowe.Arg2.im << ")" << endl;
+    cout << "(" << WyrZ_PytanieTestowe.Arg1.re << "+" << WyrZ_PytanieTestowe.Arg1.im << ")"<<znaczek<<"(" << WyrZ_PytanieTestowe.Arg2.re << "+" << WyrZ_PytanieTestowe.Arg2.im << ")=" << endl;
 
               //Do każdego operatora enum przypisuje liczbę 0-3 i można to łatwo zrobić switchem, że jeśli zmienna operator w wyrażeniu ma wartość np 0, to jakiś dodatkowy char ustawiasz sobie na +, i go wypisujesz pomiędzy dwoma liczbami zespolonymi
 
@@ -98,16 +98,19 @@ int main(int argc, char **argv)
     //cout<<"elo"<<endl;
       //Statystyka ile.LWszystkichOdp++;
     //cout<<ile<<endl;
-                                                                    //    WyrazenieZesp Pom;
-                                                                    //    Wczytaj(Pom);
+                                                                      WyrazenieZesp Pom;
+                                                                      Wczytaj(Pom);
                                                                     //    (Pom.re==LZespolona.wynik.re)
                                                                     //    //if(Pom==wynik){
                                                                     //        cout<<"jest ok"<<endl;
+                                                                    
+                                                                    
+                                                                    
 
                 //am w pliku nagłówkowym była taka funkcja "Solve", która miała rozwiązywać to działanie z bazy. Ja po prostu przy każdym działaniu porównywałam wynik zwracany przez tę funkcję  wartością wpisaną przez użytkownika
     
     
-    //Wyswietl(Pom);
+    Wyswietl(Pom);
   }
 
   
