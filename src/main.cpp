@@ -28,7 +28,7 @@ int main(int argc, char **argv)
   //ogolem przecizenie zamist tego,a ale powoli
 
   //////////////////////wczytaj//////////////
-
+Statystyka stats;
   if (argc < 2) {
     cout << endl;
     cout << " Brak opcji okreslajacej rodzaj testu." << endl;
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
   cout << endl;
 
   WyrazenieZesp   WyrZ_PytanieTestowe;
-  
+
   while (PobierzNastpnePytanie(&BazaT,&WyrZ_PytanieTestowe)) {
     //string Odp;
       //int ile=0;
@@ -82,10 +82,10 @@ int main(int argc, char **argv)
               break;
             }
 
-          
+          stats.LWszystkichOdp++;
              
 
-    cout << "(" << WyrZ_PytanieTestowe.Arg1.re << "+" << WyrZ_PytanieTestowe.Arg1.im << ")"<<znaczek<<"(" << WyrZ_PytanieTestowe.Arg2.re << "+" << WyrZ_PytanieTestowe.Arg2.im << ")=" << endl;
+        cout << ":? Podaj wynik operacji: (" << WyrZ_PytanieTestowe.Arg1.re << "+" << WyrZ_PytanieTestowe.Arg1.im << "i)"<<znaczek<<"(" << WyrZ_PytanieTestowe.Arg2.re << "+" << WyrZ_PytanieTestowe.Arg2.im << "i)=" << endl;
 
               //Do każdego operatora enum przypisuje liczbę 0-3 i można to łatwo zrobić switchem, że jeśli zmienna operator w wyrażeniu ma wartość np 0, to jakiś dodatkowy char ustawiasz sobie na +, i go wypisujesz pomiędzy dwoma liczbami zespolonymi
 
@@ -98,24 +98,76 @@ int main(int argc, char **argv)
     //cout<<"elo"<<endl;
       //Statystyka ile.LWszystkichOdp++;
     //cout<<ile<<endl;
-                                                                      WyrazenieZesp Pom;
-                                                                      Wczytaj(Pom);
-                                                                    //    (Pom.re==LZespolona.wynik.re)
-                                                                    //    //if(Pom==wynik){
-                                                                    //        cout<<"jest ok"<<endl;
+
+
+
+                                                                                      // WyrazenieZesp Pom;
+                                                                                      // Wczytaj(Pom);
+
+LZespolona odpowiedzUzytkownika;
+
+cout << "   Twoja odpowiedz: ";
+cin >> odpowiedzUzytkownika;
+
+if (odpowiedzUzytkownika == Oblicz(WyrZ_PytanieTestowe)){    
+  stats.PoprOdp++;
+  cout<<":) Odpowiedz poprawna"<<endl;
+}
+else{
+  cerr<<":( Blad. Prawidlowym wynikiem jest: "<<Oblicz(WyrZ_PytanieTestowe)<<endl;
+}
+
+// std::cout << "wynik jest " << czyWynikJestPoprawny << endl;
+
+                                    
+                                  //    (Pom.re==LZespolona.wynik.re)
+                                  //    //if(Pom==wynik){
+                                  //        cout<<"jest ok"<<endl;
+                                  
+
+                                 cout<<"Ilosc zadanych pytan: "<<stats.LWszystkichOdp<<endl; //potem do wywalenia
+                                 cout<<"Poprawnych: "<<stats.PoprOdp<<endl<<endl;
+
+
                                                                     
-                                                                    
-                                                                    
+                                                             
 
                 //am w pliku nagłówkowym była taka funkcja "Solve", która miała rozwiązywać to działanie z bazy. Ja po prostu przy każdym działaniu porównywałam wynik zwracany przez tę funkcję  wartością wpisaną przez użytkownika
     
     
-    Wyswietl(Pom);
+    //Wyswietl(Pom);
   }
 
-  
+//cout << "Podaj wyrazenie \n";
+//WyrazenieZesp wyr1;
+//Wczytaj(wyr1);
+stats.LWszystkichOdp++;
+
+LZespolona odpowiedzUzytkownika;
+
+//cout << "Jaka jest Twoja odpowiedz " << endl;
+//cin >> odpowiedzUzytkownika;
+
+if (odpowiedzUzytkownika == Oblicz(WyrZ_PytanieTestowe)){    
+  stats.PoprOdp++;
+}
+
+                                    
+                                  //    (Pom.re==LZespolona.wynik.re)
+                                  //    //if(Pom==wynik){
+                                  //        cout<<"jest ok"<<endl;
+                                  
+
+                                 cout<<"Staty: "<<stats.LWszystkichOdp<<endl;
+                                 cout<<"Poprawnych: "<<stats.PoprOdp<<endl;
+
+  cout<<"Ilosc dobrych  odpowiedzi: "<<stats.PoprOdp<<endl;
+  cout<<"Ilosc blednych odpowiedzi: "<<stats.LWszystkichOdp-stats.PoprOdp<<endl;
+  cout<<"Wynik procentowy poprawnych odpowiedzi: "<< (stats.PoprOdp/stats.LWszystkichOdp)*100<<"%"<<endl;
   cout << endl;
   cout << " Koniec testu" << endl;
   cout << endl;
 
 }
+////////////////////////////////////////////////////
+//wtf: zestaw pyta ́n zako ́nczony jest znakiem kropki.

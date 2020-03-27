@@ -34,4 +34,5 @@ bool Wczytaj(WyrazenieZesp &WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
 
 
+
 #endif

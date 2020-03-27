@@ -66,8 +66,10 @@ std::ostream & operator << (std::ostream& Strm, WyrazenieZesp WyrZ){
 
 bool Wczytaj(WyrazenieZesp &WyrZ){
     char znak;
-    if(Wczytaj(WyrZ.Arg1))//KROPKA MIAST SPACJI VOL.2
-    return true;
+
+    if(!Wczytaj(WyrZ.Arg1))//KROPKA MIAST SPACJI VOL.2
+     return false;
+
     std::cin>>znak;
     switch(znak){
         case '+':
@@ -87,10 +89,10 @@ bool Wczytaj(WyrazenieZesp &WyrZ){
         break;
     }
 
-    if(Wczytaj(WyrZ.Arg2))
-    return true;
+    if(!Wczytaj(WyrZ.Arg2))
+        return false;
 
-    return false;
+    return true;
 }
 
 
