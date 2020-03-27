@@ -1,29 +1,13 @@
 #ifndef LZESPOLONA_HH
 #define LZESPOLONA_HH
 
-#include <iostream> //DOPISALAM
-#include <ostream> //DOPISALAM (???)
+#include <iostream>
+#include <ostream>
 
-/*!
- *  Plik zawiera definicje struktury LZesplona oraz zapowiedzi
- *  przeciazen operatorow arytmetycznych dzialajacych na tej 
- *  strukturze.
- */
-
-
-/*!
- * Modeluje pojecie liczby zespolonej
- */
 struct  LZespolona {
-  double   re;    /*! Pole repezentuje czesc rzeczywista. */
-  double   im;    /*! Pole repezentuje czesc urojona. */
+  double   re;
+  double   im;
 };
-
-
-/*
- * Dalej powinny pojawic sie zapowiedzi definicji przeciazen operatorow
- */
-
 
 LZespolona  operator + (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator - (LZespolona  Skl1,  LZespolona  Skl2);
@@ -31,7 +15,7 @@ LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona  operator % (LZespolona  Skl1,  LZespolona  Skl2);
 
-LZespolona operator / (LZespolona Skl1, double  skalar);// po co to jesr 2. raz?
+LZespolona operator / (LZespolona Skl1, double  skalar);
 
 bool operator==(LZespolona arg1, LZespolona arg2);
 
@@ -41,6 +25,6 @@ bool Wczytaj(LZespolona &Skl1);
 bool PorownajLiczby(LZespolona, LZespolona);
 
 std::ostream & operator << (std::ostream& Strm, LZespolona Skl1);
-std::istream & operator >> (std::istream& Strm, LZespolona &Skl1);//OST ZMIANA O NA I
+std::istream & operator >> (std::istream& Strm, LZespolona &Skl1);
 
 #endif

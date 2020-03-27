@@ -1,12 +1,5 @@
 #include "WyrazenieZesp.hh"
 
-
-/*
- * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
- * w pliku naglowkowym.
- */
-
-
 void Wyswietl(WyrazenieZesp WyrZ){
     Wyswietl(WyrZ.Arg1);
 
@@ -37,7 +30,7 @@ void Wyswietl(WyrazenieZesp WyrZ){
 }
 
 std::ostream & operator << (std::ostream& Strm, WyrazenieZesp WyrZ){
-    Strm<<WyrZ.Arg1;//KROPKA MIAST SPACJI XD
+    Strm<<WyrZ.Arg1;
     switch(WyrZ.Op){
         case Op_Dodaj:
         Strm<<"+";
@@ -61,13 +54,13 @@ std::ostream & operator << (std::ostream& Strm, WyrazenieZesp WyrZ){
     }
     Strm<<WyrZ.Arg2;
     Strm<<"=";
-                    //jakis return?????????????????????????
+    
 }
 
 bool Wczytaj(WyrazenieZesp &WyrZ){
     char znak;
 
-    if(!Wczytaj(WyrZ.Arg1))//KROPKA MIAST SPACJI VOL.2
+    if(!Wczytaj(WyrZ.Arg1))
      return false;
 
     std::cin>>znak;
@@ -95,12 +88,8 @@ bool Wczytaj(WyrazenieZesp &WyrZ){
     return true;
 }
 
-
 LZespolona Oblicz(WyrazenieZesp  WyrZ){
 
-//do zrobienia
-//Oblicz(WyrZesp)
-//LZesp tmp
     LZespolona wynik;
     switch(WyrZ.Op){
         case Op_Dodaj:
@@ -125,11 +114,5 @@ LZespolona Oblicz(WyrazenieZesp  WyrZ){
     }
 
 return wynik;
-
-// switch(wyr.zank);
-//case '+' tmp Dodaj (wyr pierwsze, wyrd drugie);
-//break
-//...
-//return tmp;
 
 }

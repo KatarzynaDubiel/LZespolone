@@ -177,8 +177,8 @@ bool Wczytaj(LZespolona &Skl1){
 
 bool PorownajLiczby(LZespolona arg1, LZespolona arg2){
   return ( (arg1.re == arg2.re) && (arg1.im ==arg2.im) );
-};
+}
 
 bool operator==(LZespolona arg1, LZespolona arg2){
   return ( (arg1.re == arg2.re) && (arg1.im ==arg2.im) );
-};
+}
